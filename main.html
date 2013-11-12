@@ -31,8 +31,9 @@
   <div data-yield="main"></div>
 
   <script type="text/javascript">
-    console.log("Rendered main.html. Location in browser is " + window.location);
-    console.log("Working with hostname: " + window.location.hostname);
+    var pathToApp = window.location.toString().replace("/main.html", "");
+    console.log("Path to app is now set on " + pathToApp);
+    Batman.config.pathToApp = pathToApp;
     PhonegapApp.run();
   </script>
 </body>
