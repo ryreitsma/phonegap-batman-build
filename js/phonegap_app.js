@@ -15,6 +15,7 @@
     PhonegapApp.resources('messages');
 
     PhonegapApp.root('messages#index');
+    PhonegapApp.route('main.html', 'messages#index');
 
     return PhonegapApp;
 
