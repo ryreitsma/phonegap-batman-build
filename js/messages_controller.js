@@ -15,6 +15,7 @@
     }
 
     MessagesController.prototype.index = function() {
+      console.log('toeter!');
       return this.set('messages', PhonegapApp.Message.get('all').sortedBy('id', 'desc'));
     };
 
