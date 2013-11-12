@@ -31,6 +31,9 @@
   <div data-yield="main"></div>
 
   <script type="text/javascript">
+     var pathToApp = window.location.toString().replace("/main.html", "");
+     console.log("Path to app is now set on " + pathToApp);
+     Batman.config.pathToApp = pathToApp;
     Batman.config.usePushState = false;
     PhonegapApp.run();
   </script>
