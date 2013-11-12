@@ -30,6 +30,10 @@
 <body>
   <div data-yield="main"></div>
 
-  <script type="text/javascript">PhonegapApp.run();</script>
+  <script type="text/javascript">
+    console.log("Rendered main.html. Location in browser is " + window.location);
+    console.log("Working with hostname: " + window.location.hostname);
+    PhonegapApp.run();
+  </script>
 </body>
 </html>
