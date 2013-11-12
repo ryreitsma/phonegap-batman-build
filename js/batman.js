@@ -10543,7 +10543,7 @@
     HTMLStore.prototype.fetchHTML = function(path) {
       var _this = this;
       return new Batman.Request({
-        url: Batman.config.pathToHTML + path + ".html",
+        url: Batman.Navigator.normalizePath(Batman.config.pathToHTML, "" + path + ".html"),
         type: 'html',
         success: function(response) {
           return _this.set(path, response);

@@ -23,4 +23,17 @@
 
   (typeof global !== "undefined" && global !== null ? global : window).PhonegapApp = PhonegapApp;
 
+  Batman.Request.accessor('url', {
+    get: function() {
+      if (this.url.charAt(0) === "/") {
+        return "." + this.url;
+      }
+      else {
+        return this.url;
+      }
+    }, set: function(_, url) {
+      return this.url = url;
+    }
+  });
+
 }).call(this);
